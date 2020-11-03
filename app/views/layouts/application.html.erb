@@ -12,6 +12,17 @@
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-  <%= yield %>
+  <nav class="navbar navbar-dark bg-dark">
+    <%= link_to 'DXBYelp', restaurants_path, class: 'navbar-brand' %>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to 'All Restaurants', restaurants_path, class: 'nav-link' %>
+      </li>
+    </ul>
+    <%= link_to '+ Add Restaurant', new_restaurant_path, class: 'btn btn-primary' %>
+  </nav>
+  <div class="container mt-3">
+    <%= yield %>
+  </div>
 </body>
 </html>
